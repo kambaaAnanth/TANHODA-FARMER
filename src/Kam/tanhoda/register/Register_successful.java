@@ -1,0 +1,186 @@
+package Kam.tanhoda.register;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class Register_successful {
+	public static WebDriver driver;
+@Test
+public void basicfunction(){
+	System.setProperty("Webdriver.gecko.driver", "C:\\Users\\kavya\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+	driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+	driver.get("http://13.234.154.50/web");
+}
+@Test
+public void registersuccessful() throws AWTException, InterruptedException{
+	PageFactory.initElements(driver,Pagefactory.register.Register_function.class);
+	Pagefactory.register.Register_function.registerbutton.click();
+	Pagefactory.register.Register_function.aadhaar_id.sendKeys("258741963123");
+	Pagefactory.register.Register_function.hotnet_id.sendKeys("test123");
+	Pagefactory.register.Register_function.farmer_type.click();
+	Select select=new Select(Pagefactory.register.Register_function.farmer_type);
+	select.selectByIndex(1);
+	Pagefactory.register.Register_function.mobile_number.sendKeys("8508755106");
+	Pagefactory.register.Register_function.name.sendKeys("subramaniyam");
+	Pagefactory.register.Register_function.email.sendKeys("ananth@kambaa.com");
+	Pagefactory.register.Register_function.gname.sendKeys("Ananth");
+	Pagefactory.register.Register_function.gender.click();
+	Select select1=new Select(Pagefactory.register.Register_function.gender);
+	select1.selectByIndex(1);
+	Pagefactory.register.Register_function.social_status.click();
+	Select select2=new Select(Pagefactory.register.Register_function.social_status);
+	select2.selectByIndex(5);
+	Pagefactory.register.Register_function.age.sendKeys("30");
+	Pagefactory.register.Register_function.qualification.click();
+	Select select3 =new Select(Pagefactory.register.Register_function.qualification);
+	select3.selectByIndex(5);
+	Pagefactory.register.Register_function.income.sendKeys("100000");
+	Pagefactory.register.Register_function.pan_no.sendKeys("12345678910");
+	Pagefactory.register.Register_function.ration_card.sendKeys("9685748574859674");
+	Pagefactory.register.Register_function.profile_pic.click();
+	StringSelection selection=new StringSelection("C:\\Users\\kavya\\Downloads\\agriculture.jpg");
+	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+	Robot robot=new Robot();
+	robot.keyPress(KeyEvent.VK_CONTROL);
+	robot.keyPress(KeyEvent.VK_V);
+	robot.keyRelease(KeyEvent.VK_V);
+	robot.keyRelease(KeyEvent.VK_CONTROL);
+	robot.keyPress(KeyEvent.VK_ENTER);
+	robot.keyRelease(KeyEvent.VK_ENTER);
+	//Address Details
+    Pagefactory.register.Register_function.state.click();
+    Select select4=new Select(Pagefactory.register.Register_function.state);
+    select4.selectByIndex(1);
+    Pagefactory.register.Register_function.district.click();
+    Select select5=new Select(Pagefactory.register.Register_function.district);
+    select5.selectByValue("25");
+    Pagefactory.register.Register_function.block.click();
+    Select select6=new Select(Pagefactory.register.Register_function.block);
+    select6.selectByValue("313");
+    Pagefactory.register.Register_function.village.click();
+    Select select7=new Select( Pagefactory.register.Register_function.village);
+    select7.selectByValue("10908");
+    Pagefactory.register.Register_function.habitation.sendKeys("farmer");
+    Pagefactory.register.Register_function.house_no.sendKeys("20");
+    Pagefactory.register.Register_function.street.sendKeys("viruthunagar");
+    Pagefactory.register.Register_function.pincode.sendKeys("636314");
+    Pagefactory.register.Register_function.bank_name.sendKeys("State bank of india");
+    Pagefactory.register.Register_function.branch_name.sendKeys("viruthunagar");
+    Pagefactory.register.Register_function.ifsc_code.sendKeys("ifsc_635241");
+    Pagefactory.register.Register_function.bank_account_no.sendKeys("654123654123");
+    Pagefactory.register.Register_function.bank_passbook_copy.click();
+    StringSelection selection1=new StringSelection("C:\\Users\\kavya\\Downloads\\agriculture.jpg");
+	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection1, null);
+	Robot robot1=new Robot();
+	robot1.keyPress(KeyEvent.VK_CONTROL);
+	robot1.keyPress(KeyEvent.VK_V);
+	robot1.keyRelease(KeyEvent.VK_V);
+	robot1.keyRelease(KeyEvent.VK_CONTROL);
+	robot1.keyPress(KeyEvent.VK_ENTER);
+	robot1.keyRelease(KeyEvent.VK_ENTER);
+	//Document detail
+	Pagefactory.register.Register_function.aadhaar_copy.click();
+	Thread.sleep(1000);
+	  StringSelection selection2=new StringSelection("C:\\Users\\kavya\\Downloads\\agriculture.jpg");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection2, null);
+		Robot robot11=new Robot();
+		robot11.keyPress(KeyEvent.VK_CONTROL);
+		robot11.keyPress(KeyEvent.VK_V);
+		robot11.keyRelease(KeyEvent.VK_V);
+		robot11.keyRelease(KeyEvent.VK_CONTROL);
+		robot11.keyPress(KeyEvent.VK_ENTER);
+		robot11.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(1000);
+		Pagefactory.register.Register_function.ration_copy.click();
+		StringSelection selection3=new StringSelection("C:\\Users\\kavya\\Downloads\\19a249f753ced40280fbdd93541d8c99");
+		Thread.sleep(1000);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection3, null);
+		Robot robot111=new Robot();
+		robot111.keyPress(KeyEvent.VK_CONTROL);
+		robot111.keyPress(KeyEvent.VK_V);
+		robot111.keyRelease(KeyEvent.VK_V);
+		robot111.keyRelease(KeyEvent.VK_CONTROL);
+		robot111.keyPress(KeyEvent.VK_ENTER);
+		robot111.keyRelease(KeyEvent.VK_ENTER);
+		//new land details
+		Pagefactory.register.Register_function.land_ownership.click();
+		Select select8=new Select (Pagefactory.register.Register_function.land_ownership);
+		select8.selectByIndex(1);
+		Pagefactory.register.Register_function.servey_no.sendKeys("1020");
+		Pagefactory.register.Register_function.servey_no1.sendKeys("ASD");
+		 Pagefactory.register.Register_function.land_state.click();
+		    Select select9=new Select(Pagefactory.register.Register_function.land_state);
+		    select9.selectByIndex(1);
+		    Pagefactory.register.Register_function.land_district.click();
+		    Select select11=new Select(Pagefactory.register.Register_function.land_district);
+		    select11.selectByValue("25");
+		    Pagefactory.register.Register_function.land_block.click();
+		    Select select12=new Select(Pagefactory.register.Register_function.land_block);
+		    select12.selectByValue("315");
+		    Thread.sleep(1000);
+		    Pagefactory.register.Register_function.land_village.click();
+		    Select select13=new Select( Pagefactory.register.Register_function.land_village);
+		    select13.selectByIndex(10);;
+		    Pagefactory.register.Register_function.total_area.sendKeys("4");
+		    Pagefactory.register.Register_function.source_of_irrigation.click();
+		    Select select14=new Select(Pagefactory.register.Register_function.source_of_irrigation);
+		    select14.selectByIndex(1);
+		    Pagefactory.register.Register_function.patta_copy.click();
+		    StringSelection selection4=new StringSelection("C:\\Users\\kavya\\Downloads\\agriculture.jpg");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection4, null);
+			Robot robot1111=new Robot();
+			robot1111.keyPress(KeyEvent.VK_CONTROL);
+			robot1111.keyPress(KeyEvent.VK_V);
+			robot1111.keyRelease(KeyEvent.VK_V);
+			robot1111.keyRelease(KeyEvent.VK_CONTROL);
+			robot1111.keyPress(KeyEvent.VK_ENTER);
+			robot1111.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(1000);
+			Pagefactory.register.Register_function.chitta_copy.click();
+		    StringSelection selection5=new StringSelection("C:\\Users\\kavya\\Downloads\\agriculture.jpg");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection5, null);
+			Robot robot11111=new Robot();
+			robot11111.keyPress(KeyEvent.VK_CONTROL);
+			robot11111.keyPress(KeyEvent.VK_V);
+			robot11111.keyRelease(KeyEvent.VK_V);
+			robot11111.keyRelease(KeyEvent.VK_CONTROL);
+			robot11111.keyPress(KeyEvent.VK_ENTER);
+			robot11111.keyRelease(KeyEvent.VK_ENTER);
+			
+			Pagefactory.register.Register_function.adangal_copy.click();
+		    StringSelection selection6=new StringSelection("C:\\Users\\kavya\\Downloads\\agriculture.jpg");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection6, null);
+			Robot robot111111=new Robot();
+			robot111111.keyPress(KeyEvent.VK_CONTROL);
+			robot111111.keyPress(KeyEvent.VK_V);
+			robot111111.keyRelease(KeyEvent.VK_V);
+			robot111111.keyRelease(KeyEvent.VK_CONTROL);
+			robot111111.keyPress(KeyEvent.VK_ENTER);
+			robot111111.keyRelease(KeyEvent.VK_ENTER);
+		
+			Pagefactory.register.Register_function.vao_certificate.click();
+		    StringSelection selection7=new StringSelection("C:\\Users\\kavya\\Downloads\\agriculture.jpg");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection7, null);
+			Robot robot1111111=new Robot();
+			robot1111111.keyPress(KeyEvent.VK_CONTROL);
+			robot1111111.keyPress(KeyEvent.VK_V);
+			robot1111111.keyRelease(KeyEvent.VK_V);
+			robot1111111.keyRelease(KeyEvent.VK_CONTROL);
+			robot1111111.keyPress(KeyEvent.VK_ENTER);
+			robot1111111.keyRelease(KeyEvent.VK_ENTER);
+			Pagefactory.register.Register_function.submit.click();
+}
+
+}

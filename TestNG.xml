@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TANHODA WEB" verbose="2" >
+	<test name="Loginunsuccessful with invalid mobile number">
+		<classes>
+			<class name="Kam.tanhoda.login.LoginUnsuccessful">
+			</class>
+		</classes>
+	</test>
+	<test name="Loginsuccessful with validcredential ">
+		<classes>
+			<class name="Kam.tanhoda.login.Loginfunction">
+			</class>
+		</classes>
+	</test> 
+</suite>
